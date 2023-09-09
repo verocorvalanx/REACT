@@ -19,18 +19,18 @@ export default function RootLayout({
 }) {
 
   const currentRoute = usePathname();
-  const stylehref='flex items-center pl-[30px] pr-[30px] h-full no-underline';
-  const active = stylehref + ' text-black bg-amber-300';
+  const stylehref='flex items-center pl-[30px] pr-[30px] h-full no-underline font-mono';
+  const active = stylehref + ' text-black bg-blue-200';
   const inactive = stylehref+ ' text-white';
   console.log(currentRoute);
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className='h-[56px] flex justify-center items-center bg-indigo-700 drop-shadow-lg'>
+        <nav className='h-[56px] flex justify-center items-center bg-stone-800 drop-shadow-lg'>
           <Link href='/' className={ (currentRoute === '/') ? active : inactive}> HOME </Link>
           <Link href='/about'  className={ (currentRoute === '/about') ? active : inactive}> ACERCA DE </Link>
-          <Link href='/contactos'  className={ (currentRoute === '/contactos') ? active : inactive}> CONTACTOS </Link>
+          <Link href='/productos'  className={ (currentRoute === '/productos') ? active : inactive}> PRODUCTOS </Link>
         </nav>
 
         {children}</body>
